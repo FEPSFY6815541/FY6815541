@@ -10,28 +10,5 @@
       <hr>
       <h2 style="font-family:calibri,"><b>Conference Paper: Bridge Deck Repairs</b></h2>
       <hr>
- 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Parallax Scrolling</title>
-</head>
-<body>
-    <div class="parallax-background"></div>
-    <div class="parallax-foreground"></div>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            const background = document.querySelector('.parallax-background');
-            const foreground = document.querySelector('.parallax-foreground');
-            const scrollValue = window.scrollY;
-
-            // Adjust the position of the layers based on scroll value
-            background.style.transform = `translateY(-${scrollValue * 0.5}px)`;
-            foreground.style.transform = `translateY(-${scrollValue * 1.5}px)`;
-        });
-    </script>
-
-    
 
 </html>
