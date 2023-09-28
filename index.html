@@ -7,21 +7,28 @@
     <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
       <h1><b>ENG0018 Computer Laboratory2023/24</b></h1>
       <h2>Student URN: 6815541</h2>
-      @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
-    }
-}
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Parallax Scrolling</title>
+</head>
+<body>
+    <div class="parallax-background"></div>
+    <div class="parallax-foreground"></div>
 
-.element {
-    animation: bounce 2s infinite;
-}
+    <script>
+        window.addEventListener('scroll', function() {
+            const background = document.querySelector('.parallax-background');
+            const foreground = document.querySelector('.parallax-foreground');
+            const scrollValue = window.scrollY;
 
+            // Adjust the position of the layers based on scroll value
+            background.style.transform = `translateY(-${scrollValue * 0.5}px)`;
+            foreground.style.transform = `translateY(-${scrollValue * 1.5}px)`;
+        });
+    </script>
+
+    
 
 </html>
