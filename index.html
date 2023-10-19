@@ -7,17 +7,41 @@
     <style>
         /* Your existing CSS styles */
 
-        .centered-text {
-            text-align: center;
-        }
-
         .content {
-            padding: 20px; /* Adjust padding as needed */
-            text-align: left; /* Align text to the left within the container */
+            padding: 20px; /* Add space around the text */
+            max-width: 800px; /* Set a maximum width for the text box */
+            margin: 0 auto; /* Center the text box horizontally */
+            text-align: left; /* Align text to the left within the box */
         }
 
         .ex1 {
             word-wrap: break-word; /* Allow text to wrap within the <pre> element */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
     </style>
 </head>
@@ -44,22 +68,12 @@
         </div>
         <a href="#">About</a>
     </div>
-    <div class="centered-text">
-        <h3 id="Abstract" style="font-size: 2rem; font-weight: 700; font-family: Helvetica, Arial, sans-serif; line-height: 1.25; color: darkblue;">Aurora SR-91: Unveiling Supersonic & Hypersonic Propulsion with Detonation Engines</h3>
-    </div>
-    <div class="centered-text">
-        <h4><strong>Abstract</strong></h4>
-    </div>
     <div class="content">
-        <pre>
-            <p class="ex1">
-                 The paper presents the conceptual design of high-speed hypersonic aircraft. The study focuses on the Aurora SR-91, "the plane that doesnt exist," aircraft. The input to this conceptual design is a mission profile. Mission profile is a flight profile of the aircraft defined by the customer. This paper gives the SR-91 aircraft mission profile specified by the US air force. Mission profile helps in defining the attributes of the aircraft such as wing profile, engine design and configuration, propulsion system, etc. We'll be having a further look into the propulsion system which will help us understand the engine design and configuration. A propulsion system directly influences the performance of the aircraft.
-            </p>
-        </pre>
+        <p class="ex1">
+            The paper presents the conceptual design of high-speed hypersonic aircraft. The study focuses on the Aurora SR-91, "the plane that doesnt exist," aircraft. The input to this conceptual design is a mission profile. Mission profile is a flight profile of the aircraft defined by the customer. This paper gives the SR-91 aircraft mission profile specified by the US air force. Mission profile helps in defining the attributes of the aircraft such as wing profile, engine design and configuration, propulsion system, etc. We'll be having a further look into the propulsion system which will help us understand the engine design and configuration. A propulsion system directly influences the performance of the aircraft.
+        </p>
     </div>
 </body>
 
 </html>
-
-
 
