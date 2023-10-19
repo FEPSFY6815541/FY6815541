@@ -5,17 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        /* Your existing CSS styles */
-
-        .content {
-            padding: 20px; /* Add space around the text */
-            max-width: 800px; /* Set a maximum width for the text box */
-            margin: 0 auto; /* Center the text box horizontally */
-            text-align: left; /* Align text to the left within the box */
+        /* Define the animation keyframes */
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
         }
 
-        .ex1 {
-            word-wrap: break-word; /* Allow text to wrap within the <pre> element */
+        /* Apply the animation to an element */
+        .animated-text {
+            animation: fade 3s infinite; /* Animation name, duration, and iteration count */
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn,
+        .dropbtn:focus {
+            background-color: red;
         }
 
         .dropdown-content {
@@ -43,6 +86,19 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        .show {
+            display: block;
+        }
+
+        /* Styling for neat paragraphs */
+        .neat-paragraph {
+            padding: 20px; /* Add space around the text */
+            max-width: 800px; /* Set a maximum width for the text box */
+            margin: 0 auto; /* Center the text box horizontally */
+            text-align: left; /* Align text to the left within the box */
+            word-wrap: break-word; /* Allow text to wrap within the <pre> element */
+        }
     </style>
 </head>
 
@@ -68,12 +124,15 @@
         </div>
         <a href="#">About</a>
     </div>
-    <div class="content">
-        <p class="ex1">
-            The paper presents the conceptual design of high-speed hypersonic aircraft. The study focuses on the Aurora SR-91, "the plane that doesnt exist," aircraft. The input to this conceptual design is a mission profile. Mission profile is a flight profile of the aircraft defined by the customer. This paper gives the SR-91 aircraft mission profile specified by the US air force. Mission profile helps in defining the attributes of the aircraft such as wing profile, engine design and configuration, propulsion system, etc. We'll be having a further look into the propulsion system which will help us understand the engine design and configuration. A propulsion system directly influences the performance of the aircraft.
+    <div class="neat-paragraph">
+        <h3 id="Abstract" style="font-size: 2rem; font-weight: 700; font-family: Helvetica, Arial, sans-serif; line-height: 1.25; color: darkblue;">Aurora SR-91: Unveiling Supersonic & Hypersonic Propulsion with Detonation Engines</h3>
+        <h4><strong>Abstract</strong></h4>
+        <p>
+            The paper presents the conceptual design of high-speed hypersonic aircraft. The study focuses on the Aurora SR-91, "the plane that doesnt exist," aircraft. The input to this conceptual design is a mission profile. Mission profile is a flight profile of the aircraft defined by the customer. This paper gives the SR-91 aircraft mission profile specified by US air force. Mission profile helps in defining the attributes of the aircraft such as wing profile, engine design and configuration, propulsion system, etc. We'll be having a further look into propulsion system which will help us understand the engine design and configuration. A propulsion system directly influences the performance of the aircraft.
         </p>
     </div>
 </body>
 
 </html>
+
 
