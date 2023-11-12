@@ -9,6 +9,34 @@
             text-align: left;
             word-wrap: break-word;
         }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 300px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -150px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -21,9 +49,18 @@
             Let us now consider the equations describing the conservation of momentum
             and the conservation of angular momentum. EULER is credited with writing the equations for an inviscid (i.e. not viscous) ideal fluid, which are:
         </p>
-        ![Navier-Stokes Equation](URL_to_image)
+        Click on the <span class="tooltip" onclick="showTooltip('inviscid_shock')">inviscid shock<span class="tooltip-text">In fluid dynamics, inviscid flow is the flow of an inviscid (zero-viscosity) fluid, also known as a superfluid. The Reynolds number of inviscid flow approaches infinity as the viscosity approaches zero.</span></span> to see its meaning.
     </div>
+
+    <script>
+        function showTooltip(term) {
+            // You can customize this function to fetch and display the actual meaning dynamically.
+            // For simplicity, it just shows a static text in this example.
+            alert("This is the meaning of the word '" + term + "': In fluid dynamics, inviscid flow is the flow of an inviscid (zero-viscosity) fluid, also known as a superfluid. The Reynolds number of inviscid flow approaches infinity as the viscosity approaches zero.");
+        }
+    </script>
 </body>
 </html>
+
 
 
