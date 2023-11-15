@@ -1,67 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style>
-        .neat-paragraph {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-            word-wrap: break-word;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif; /* Use a serif font for a book-like feel */
+      background-color: #f8f8f8; /* Light background color */
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-        }
+    .book-page {
+      background-color: #fff; /* White color for the page */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      max-width: 80%; /* Adjust the width as needed */
+      padding: 20px; /* Add some padding to the page content */
+      line-height: 1.6; /* Adjust line height for readability */
+      text-align: justify; /* Justify text for a traditional book appearance */
+    }
 
-        .tooltip .tooltip-text {
-            visibility: hidden;
-            width: 300px;
-            background-color: #555;
-            color: #fff;
-            text-align: center;
-            border-radius: 8px;
-            padding: 10px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -150px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
+    .neat-paragraph {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      word-wrap: break-word;
+    }
 
-        .tooltip:hover .tooltip-text {
-            visibility: visible;
-            opacity: 1;
-        }
-    </style>
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      width: 300px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+      padding: 10px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -150px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+  <title>Book Page Example</title>
 </head>
 <body>
-    <div class="neat-paragraph">    
-        <h1 style="font-size: 1.5rem;"><strong>Mathematics And CFD</strong></h1>
-        <p>
-            Conservation of mass and momentum
-        </p>
-        <p>
-            Let us now consider the equations describing the conservation of momentum
-            and the conservation of angular momentum. EULER is credited with writing the equations for an inviscid (i.e. not viscous) ideal fluid, which are:
-            inviscid shock
-        </p>
-       <span class="tooltip" onclick="showTooltip('inviscid_shock')">inviscid shock<span class="tooltip-text">In fluid dynamics, inviscid flow is the flow of an inviscid (zero-viscosity) fluid, also known as a superfluid. The Reynolds number of inviscid flow approaches infinity as the viscosity approaches zero.</span></span> to see its meaning.
-    </div>
 
-    <script>
-        function showTooltip(term) {
-            // You can customize this function to fetch and display the actual meaning dynamically.
-            // For simplicity, it just shows a static text in this example.
-            alert("This is the meaning of the word '" + term + "': In fluid dynamics, inviscid flow is the flow of an inviscid (zero-viscosity) fluid, also known as a superfluid. The Reynolds number of inviscid flow approaches infinity as the viscosity approaches zero.");
-        }
-    </script>
+<div class="book-page neat-paragraph">
+  <h1 style="font-size: 1.5rem;"><strong>Mathematics And CFD</strong></h1>
+  <p>
+    Conservation of mass and momentum
+  </p>
+  <p>
+    Let us now consider the equations describing the conservation of momentum
+    and the conservation of angular momentum. EULER is credited with writing the equations for an inviscid (i.e. not viscous) ideal fluid, which are:
+    inviscid shock
+  </p>
+  <span class="tooltip" onclick="showTooltip('inviscid_shock')">inviscid shock<span class="tooltip-text">In fluid dynamics, inviscid flow is the flow of an inviscid (zero-viscosity) fluid, also known as a superfluid. The Reynolds number of inviscid flow approaches infinity as the viscosity approaches zero.</span></span> to see its meaning.
+</div>
+
+<script>
+  function showTooltip(term) {
+    // You can customize this function to fetch and display the actual meaning dynamically.
+    // For simplicity, it just shows a static text in this example.
+    alert("This is the meaning of the word '" + term + "': In fluid dynamics, inviscid flow is the flow of an inviscid (zero-viscosity) fluid, also known as a superfluid. The Reynolds number of inviscid flow approaches infinity as the viscosity approaches zero.");
+  }
+</script>
+
 </body>
 </html>
+
 
 
 
