@@ -47,21 +47,30 @@
       padding: 10px;
       position: absolute;
       z-index: 1;
-      bottom: 125%;
-      left: 50%;
-      margin-left: -150px;
+      top: 0;
+      right: 125%;
       opacity: 0;
-      transition: opacity 0.3s;
+      transition: opacity 0.3s, transform 0.3s;
+      transform: translateX(10px);
     }
 
     .tooltip:hover .tooltip-text {
       visibility: visible;
       opacity: 1;
+      transform: translateX(0);
     }
 
     .reference-content {
       display: none;
       margin-top: 10px;
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      border-radius: 8px;
     }
   </style>
   <title>Book Page Example</title>
@@ -83,12 +92,19 @@
   <p>when referring to a detonation traveling at a speed DCJ determined by conservation laws, 
     it means that the detonation is propagating at the Chapman-Jouguet detonation speed, a speed consistent with the conservation principles governing the behavior of detonation waves</p>
 
-  <p>This is some text in your document. You can reference a source like this: <a class="reference-link" href="javascript:void(0);" onclick="toggleReference('reference1')">[1]</a>.</p>
+  <!-- Placeholder for reference links -->
+  <p>This is some text in your document. You can reference a source like this: <span class="reference-link" onclick="toggleReference('reference1')">[1]</span>.</p>
+  <p>Additional text...</p>
+  <p>Another reference here: <span class="reference-link" onclick="toggleReference('reference2')">[2]</span>.</p>
 
   <!-- Your reference content goes here -->
   <div id="reference1" class="reference-content">
       <p>Effects of combined obstacles on deflagration characteristics of hydrogen-air premixed gas</p>
       <p>Authors: Zihao Xiu, Zhenyi Liu, Pengliang Li, Bin Hao, Mingzhi Li, Yao Zhao, Peng Cai</p>
+  </div>
+
+  <div id="reference2" class="reference-content">
+      <p>Another reference content...</p>
   </div>
 </div>
   
