@@ -58,6 +58,11 @@
       visibility: visible;
       opacity: 1;
     }
+
+    .reference-content {
+      display: none;
+      margin-top: 10px;
+    }
   </style>
   <title>Book Page Example</title>
 </head>
@@ -75,14 +80,16 @@
   </p>
   <span class="tooltip" onclick="showTooltip('inviscid_shock')">inviscid shock<span class="tooltip-text">In fluid dynamics, inviscid flow is the flow of an inviscid (zero-viscosity) fluid, also known as a superfluid. The Reynolds number of inviscid flow approaches infinity as the viscosity approaches zero.</span></span> to see its meaning.
 
-<p>when referring to a detonation traveling at a speed DCJ determined by conservation laws, 
-  it means that the detonation is propagating at the Chapman-Jouguet detonation speed, a speed consistent with the conservation principles governing the behavior of detonation waves</p>
+  <p>when referring to a detonation traveling at a speed DCJ determined by conservation laws, 
+    it means that the detonation is propagating at the Chapman-Jouguet detonation speed, a speed consistent with the conservation principles governing the behavior of detonation waves</p>
 
+  <p>This is some text in your document. You can reference a source like this: <a class="reference-link" href="javascript:void(0);" onclick="toggleReference('reference1')">[1]</a>.</p>
 
-
-
-
-
+  <!-- Your reference content goes here -->
+  <div id="reference1" class="reference-content">
+      <p>Effects of combined obstacles on deflagration characteristics of hydrogen-air premixed gas</p>
+      <p>Authors: Zihao Xiu, Zhenyi Liu, Pengliang Li, Bin Hao, Mingzhi Li, Yao Zhao, Peng Cai</p>
+  </div>
 </div>
   
 
@@ -92,10 +99,20 @@
     // For simplicity, it just shows a static text in this example.
     alert("This is the meaning of the word '" + term + "': In fluid dynamics, inviscid flow is the flow of an inviscid (zero-viscosity) fluid, also known as a superfluid. The Reynolds number of inviscid flow approaches infinity as the viscosity approaches zero.");
   }
+
+  function toggleReference(referenceId) {
+      var referenceContent = document.getElementById(referenceId);
+      if (referenceContent.style.display === "none") {
+          referenceContent.style.display = "block";
+      } else {
+          referenceContent.style.display = "none";
+      }
+  }
 </script>
 
 </body>
 </html>
+
 
 
 
