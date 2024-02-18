@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your App Display</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #iphone-container {
+            position: relative;
+        }
+
+        #iphone {
+            width: 300px;
+            height: 600px;
+            background: url('iphone-frame.png') no-repeat center;
+            background-size: contain;
+            position: relative;
+        }
+
+        #app-preview {
+            width: 80%;
+            height: 80%;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #app-preview img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px; /* Optional: add border-radius to the app preview */
+        }
+
+        #app-button {
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="iphone-container">
+        <div id="iphone">
+            <div id="app-preview">
+                <!-- Add your app content or image here -->
+                <img src="your-app-preview.png" alt="Your App Preview">
+                <button id="app-button" onclick="showAppDetails()">Click me</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showAppDetails() {
+            alert("Button clicked! You can add your own logic here.");
+            // Add your logic to show more details or navigate within your app
+        }
+    </script>
+</body>
+
+</html>
